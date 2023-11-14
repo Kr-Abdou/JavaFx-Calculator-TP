@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="609.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.calculator.Controller">
+   <children>
+      <HBox alignment="TOP_RIGHT" layoutX="5.0" layoutY="2.0" prefHeight="24.0" prefWidth="600.0" AnchorPane.rightAnchor="5.0">
+         <children>
+            <JFXButton fx:id="ThemeSwitch" onAction="#switchTheme" prefHeight="26.0" prefWidth="94.0" text="Theme" />
+            <Label fx:id="ModeDisplay" prefHeight="26.0" prefWidth="115.0" text="DEG" />
+            <Label fx:id="SecondDisplay" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="26.0" prefWidth="473.0" text="0" />
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="-1.0" layoutY="28.0" prefHeight="65.0" prefWidth="600.0" AnchorPane.rightAnchor="5.0">
+         <children>
+            <Label fx:id="Result" alignment="CENTER_RIGHT" contentDisplay="TOP" prefHeight="60.0" prefWidth="594.0" text="0">
+               <font>
+                  <Font size="38.0" />
+               </font>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </Label>
+         </children>
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding></HBox>
+      <VBox layoutX="305.0" layoutY="120.0" prefHeight="276.0" prefWidth="300.0">
+         <children>
+            <HBox>
+               <children>
+                  <Button fx:id="Clearbtn" mnemonicParsing="false" onAction="#handleClear" prefHeight="50.0" prefWidth="402.0" styleClass="shared-button" text="AC" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="BackSpacebtn" mnemonicParsing="false" prefHeight="50.0" prefWidth="402.0" styleClass="shared-button" text="←" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="NegPosbtn" mnemonicParsing="false" prefHeight="50.0" prefWidth="402.0" styleClass="shared-button" text="±" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button id="operators" fx:id="Divbtn" mnemonicParsing="false" onAction="#handleOper" prefHeight="50.0" prefWidth="402.0" styleClass="shared-button" text="/" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Button fx:id="Sevenbtn" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleDigit" prefHeight="50.0" prefWidth="402.0" text="7" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="Eightbtn" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleDigit" prefHeight="50.0" prefWidth="402.0" text="8" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="Ninebtn" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleDigit" prefHeight="50.0" prefWidth="402.0" text="9" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button id="operators" fx:id="Mulbtn" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleOper" prefHeight="50.0" prefWidth="402.0" styleClass="shared-button" text="*" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <Button fx:id="Fourbtn" mnemonicParsing="false" onAction="#handleDigit" prefHeight="50.0" prefWidth="402.0" text="4" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="Fivebtn" mnemonicParsing="false" onAction="#handleDigit" prefHeight="50.0" prefWidth="402.0" text="5" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="Sixbtn" mnemonicParsing="false" onAction="#handleDigit" prefHeight="50.0" prefWidth="402.0" text="6" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="Minbtn" mnemonicParsing="false" onAction="#handleOper" prefHeight="50.0" prefWidth="402.0" styleClass="shared-button" text="-" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <Button fx:id="Onebtn" mnemonicParsing="false" onAction="#handleDigit" prefHeight="50.0" prefWidth="402.0" text="1" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="Twobtn" mnemonicParsing="false" onAction="#handleDigit" prefHeight="50.0" prefWidth="402.0" text="2" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="Threebtn" mnemonicParsing="false" onAction="#handleDigit" prefHeight="50.0" prefWidth="402.0" text="3" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="Plusbtn" mnemonicParsing="false" onAction="#handleOper" prefHeight="50.0" prefWidth="402.0" styleClass="shared-button" text="+" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <Button fx:id="Zerobtn" mnemonicParsing="false" onAction="#handleDigit" prefHeight="50.0" prefWidth="174.0" style="-fx-background-color: 0060E5;" text="0" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="Pointbtn" mnemonicParsing="false" onAction="#handleDigit" prefHeight="50.0" prefWidth="98.0" text="." textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="Equalbtn" mnemonicParsing="false" onAction="#handleEqual" prefHeight="50.0" prefWidth="98.0" styleClass="shared-button" text="=" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <VBox layoutX="5.0" layoutY="120.0" prefHeight="276.0" prefWidth="300.0">
+         <children>
+            <HBox>
+               <children>
+                  <Button fx:id="Pi" mnemonicParsing="false" onAction="#handlePi" prefHeight="50.0" prefWidth="402.0" styleClass="shared-button" text="π" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="e" mnemonicParsing="false" onAction="#handleE" prefHeight="50.0" prefWidth="402.0" styleClass="shared-button" text="e" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="LParenthesis" mnemonicParsing="false" onAction="#handleParentheses" prefHeight="50.0" prefWidth="402.0" styleClass="shared-button" text="(" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="RParenthesis" mnemonicParsing="false" onAction="#handleParentheses" prefHeight="50.0" prefWidth="402.0" styleClass="shared-button" text=")" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+            <HBox>
+               <children>
+                  <Button fx:id="Sin" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleSin" prefHeight="50.0" prefWidth="402.0" styleClass="shared-button" text="Sin" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="Cos" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleCos" prefHeight="50.0" prefWidth="402.0" styleClass="shared-button" text="Cos" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="Tan" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleTan" prefHeight="50.0" prefWidth="402.0" styleClass="shared-button" text="Tan" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="Ln" contentDisplay="CENTER" mnemonicParsing="false" onAction="#handleLn" prefHeight="50.0" prefWidth="402.0" styleClass="shared-button" text="Ln" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <Button fx:id="Log" mnemonicParsing="false" onAction="#handlLog" prefHeight="50.0" prefWidth="402.0" styleClass="shared-button" text="Log" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="Square" mnemonicParsing="false" onAction="#handlePowerTwo" prefHeight="50.0" prefWidth="402.0" styleClass="shared-button" text="X²" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="XpowerY" mnemonicParsing="false" onAction="#handleXpowerY" prefHeight="50.0" prefWidth="402.0" styleClass="shared-button" text="^" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="SquareRoot" mnemonicParsing="false" onAction="#handleSquareRoot" prefHeight="50.0" prefWidth="402.0" styleClass="shared-button" text="√" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <Button fx:id="Hex" mnemonicParsing="false" onAction="#handleHex" prefHeight="50.0" prefWidth="402.0" styleClass="shared-button" text="HEX" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="Decimal" mnemonicParsing="false" onAction="#handleDec" prefHeight="50.0" prefWidth="402.0" styleClass="shared-button" text="DEC" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="Binary" mnemonicParsing="false" onAction="#handleBin" prefHeight="50.0" prefWidth="402.0" styleClass="shared-button" text="BIN" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="OctaMod" mnemonicParsing="false" onAction="#handleOct" prefHeight="50.0" prefWidth="402.0" styleClass="shared-button" text="OCT" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+            <HBox>
+               <children>
+                  <Button fx:id="DegMod" mnemonicParsing="false" onAction="#handleDegMod" prefHeight="50.0" prefWidth="402.0" styleClass="shared-button" text="Deg" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="RadMod" mnemonicParsing="false" onAction="#handleRad" prefHeight="50.0" prefWidth="402.0" styleClass="shared-button" text="Rad" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="ANS" mnemonicParsing="false" onAction="#handleANS" prefHeight="50.0" prefWidth="402.0" styleClass="shared-button" text="ANS" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="Modulo" mnemonicParsing="false" onAction="#handleOper" prefHeight="50.0" prefWidth="402.0" styleClass="shared-button" text="\%" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

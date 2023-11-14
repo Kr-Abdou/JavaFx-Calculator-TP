@@ -1,0 +1,79 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+/*
+.button{
+    -fx-background-color: #242933;
+    -fx-background-radius: 4px;
+}
+.button:hover{
+    -fx-background-color: #373f4e;
+}
+*/
+.light {
+    -fx-background-color: #f2f2f2;
+    -fx-text-fill: black;
+}
+.light .button {
+    -fx-background-color: #373f4e;
+}
+.light .button:hover {
+    -fx-background-color: #dadada;
+    -fx-effect: dropshadow(three-pass-box, #ffffff, 10, 0, 0, 0);
+}
+
+.light #ThemeSwitch {
+    -fx-background-color: #f2f2f2;
+}
+
+
+.dark {
+    -fx-background-color: #253237;
+    -fx-text-fill: white;
+}
+.dark .button {
+    -fx-background-color: #9db4c0;
+}
+.dark .button:hover {
+    -fx-background-color: rgba(180, 229, 255, 0.9);
+    -fx-effect: dropshadow(three-pass-box, rgb(255, 255, 255), 10, 0, 0, 0);
+
+}
+.dark #ThemeSwitch {
+    -fx-background-color: #253237;
+    -fx-text-fill: white;
+
+}
+.dark .label{
+    -fx-text-fill: white;
+}
+
+
+.pastel {
+    -fx-background-color: #E4F1EE;
+    -fx-text-fill: #8CC5B9;
+
+}
+
+.pastel .button {
+    -fx-background-color: #295149;
+}
+
+.pastel #ThemeSwitch {
+    -fx-background-color: #E4F1EE;
+
+}
+.pastel .button:hover {
+    -fx-background-color: #8CC5B9;
+    -fx-effect: dropshadow(three-pass-box, #C9E4DE, 10, 0, 0, 0);
+
+}
+
+.light .shared-button {
+    -fx-background-color: #0060E5;
+}
+.dark .shared-button{
+    -fx-background-color: #5c6b73;
+}
+.pastel .shared-button{
+    -fx-background-color: #C9E4DE;
+}
